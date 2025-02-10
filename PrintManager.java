@@ -97,7 +97,7 @@ class PrintQueue {
             if (priorityOrder != 0) {
                 return priorityOrder; 
             }
-            return j1.getTimestamp().compareTo(j2.getTimestamp()); // En caso de misma prioridad, se compara por hora de envío
+            return j1.getTimestamp().compareTo(j2.getTimestamp()); //En caso de misma prioridad, se compara por hora de envío
         });
     }
 }
@@ -111,7 +111,7 @@ class PrintService {
         printQueue = new PrintQueue();
     }
 
-    //Método para enviar un nuevo trabajo a la cola de impresión con validación de prioridad
+    //Método para enviar un nuevo trabajo a la cola de impresión 
     public void submitJob(String user, char priority) {
         if (priority != 'L' && priority != 'M' && priority != 'H') {
             priority = 'M'; //Prioridad por defecto
